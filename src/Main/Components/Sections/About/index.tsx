@@ -1,21 +1,23 @@
 import { Box, Typography } from "@mui/material";
+import dashboard from "../../../Images/graphic.png";
 
 export function About() {
   return (
     <Box style={{ flex: 1 }}>
       <Box>
-        <Typography variant={"h2"}>Your Cloud, Your Way</Typography>
+        <Typography fontWeight={700} variant={"h2"}>
+          Your Cloud, Your Way
+        </Typography>
         <Typography variant={"h6"}>
           All cloud details of your product in one dashboard
         </Typography>
       </Box>
 
-      <Box>
+      <Box style={{ paddingTop: 20, paddingBottom: 20 }}>
         <img
-          src="./graphic.png"
+          src={dashboard}
           alt="two people looking at a dashboard"
           height="400px"
-          width="400px"
         />
       </Box>
     </Box>

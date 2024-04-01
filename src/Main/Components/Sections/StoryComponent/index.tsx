@@ -4,29 +4,133 @@ export interface IStoryComponentProps {
   image: string;
   title: string;
   description: string;
+  direction?: "right" | "left";
 }
 
 export function StoryComponent({
   title,
   description,
   image,
+  direction = "left",
 }: IStoryComponentProps) {
   return (
-    <Box style={{ flex: 1, flexDirection: "row" }}>
-      <Box style={{ flex: 1 }}>
-        <Typography variant="h3">{title}</Typography>
-        <Typography variant="body1">{description}</Typography>
-        <Link
-          style={{ backgroundColor: "orange", padding: 12, borderRadius: 10 }}
+    <Box
+      style={{
+        display: "flex",
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 40,
+      }}
+    >
+      {direction === "left" ? (
+        <Box
+          style={{
+            display: "flex",
+            flex: 1,
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
         >
-          Sign up
-        </Link>
-      </Box>
-      <Box style={{ flex: 1 }}>
-        <Box style={{ backgroundColor: "blue", height: 200, width: 150 }}>
-          <img src={image} height="200px" width="150px" alt="story image" />
+          <Box
+            style={{
+              display: "flex",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+            }}
+          >
+            <Typography
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              variant="h3"
+            >
+              {title}
+            </Typography>
+            <Typography
+              display={"flex"}
+              justifyContent={"flex-start"}
+              alignItems={"flex-start"}
+              variant="body1"
+            >
+              {description}
+            </Typography>
+            <Link
+              style={{
+                backgroundColor: "orange",
+                padding: 12,
+                borderRadius: 10,
+              }}
+            >
+              Sign up
+            </Link>
+          </Box>
+          <Box
+            style={{
+              display: "flex",
+              flex: 1,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box>
+              <img src={image} height="150px" width="220px" alt="story image" />
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      ) : (
+        <Box
+          style={{
+            display: "flex",
+            flex: 1,
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <Box style={{ flex: 1, justifyContent: "center" }}>
+            <Box>
+              <img src={image} height="150px" width="220px" alt="story image" />
+            </Box>
+          </Box>{" "}
+          <Box
+            style={{
+              display: "flex",
+              flex: 1,
+              flexDirection: "column",
+              justifyContent: "flex-end",
+              alignItems: "flex-end",
+            }}
+          >
+            <Typography
+              justifyContent={"flex-start"}
+              alignItems={"flex-end"}
+              variant="h3"
+            >
+              {title}
+            </Typography>
+            <Typography
+              justifyContent={"flex-start"}
+              alignItems={"flex-end"}
+              variant="body1"
+            >
+              {description}
+            </Typography>
+            <Link
+              style={{
+                backgroundColor: "orange",
+                padding: 12,
+                borderRadius: 10,
+              }}
+            >
+              Sign up
+            </Link>
+          </Box>
+        </Box>
+      )}
     </Box>
   );
 }

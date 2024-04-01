@@ -1,4 +1,5 @@
 import { Box, Link } from "@mui/material";
+import logo from "../../Images/logo.png";
 
 export function NavBar() {
   return (
@@ -14,7 +15,7 @@ export function NavBar() {
       alignItems={"center"}
     >
       <Box>
-        <img src="./logo.png" height="40px" width="90px" alt="cloveda logo" />
+        <img src={logo} height="40px" alt="cloveda logo" />
       </Box>
       <Box style={{ justifyContent: "space-between" }} flexDirection={"row"}>
         <Link style={{ paddingLeft: 10, paddingRight: 10 }}>About</Link>
