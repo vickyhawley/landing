@@ -8,19 +8,59 @@ export function NavBar() {
         display: "flex",
         padding: 16,
         flexDirection: "row",
-        paddingLeft: 24,
-        paddingRight: 24,
+        paddingLeft: "12%",
+        paddingRight: "12%",
       }}
       justifyContent={"space-between"}
       alignItems={"center"}
     >
       <Box>
-        <img src={logo} height="40px" alt="cloveda logo" />
+        <img src={logo} height="50px" alt="cloveda logo" />
       </Box>
       <Box style={{ justifyContent: "space-between" }} flexDirection={"row"}>
-        <Link style={{ paddingLeft: 10, paddingRight: 10 }}>About</Link>
-        <Link style={{ paddingLeft: 10, paddingRight: 10 }}>Budgeting</Link>
-        <Link style={{ paddingLeft: 10, paddingRight: 10 }}>Approvals</Link>
+        <Link
+          style={{
+            paddingLeft: 10,
+            paddingRight: 10,
+            textDecoration: "none",
+            color: "#000",
+          }}
+        >
+          About
+        </Link>
+        <Link
+          style={{
+            paddingLeft: 10,
+            paddingRight: 10,
+            textDecoration: "none",
+            color: "#000",
+          }}
+        >
+          Budgeting
+        </Link>
+        <Link
+          style={{
+            paddingLeft: 10,
+            paddingRight: 10,
+            textDecoration: "none",
+            color: "#000",
+          }}
+        >
+          Approvals
+        </Link>
+        <Link
+          style={{
+            fontWeight: "bold",
+            padding: 12,
+            textDecoration: "none",
+            backgroundColor: "#FF8200",
+            color: "#000",
+            borderRadius: 10,
+            marginLeft: 10,
+          }}
+        >
+          Sign up
+        </Link>
       </Box>
     </Box>
   );

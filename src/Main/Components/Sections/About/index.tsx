@@ -3,12 +3,29 @@ import dashboard from "../../../Images/graphic.png";
 
 export function About() {
   return (
-    <Box style={{ flex: 1 }}>
-      <Box>
-        <Typography fontWeight={700} variant={"h2"}>
+    <Box
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        flex: 1,
+      }}
+    >
+      <Box
+        style={{
+          paddingTop: 40,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          flex: 1,
+        }}
+      >
+        <Typography fontWeight={700} variant={"h3"}>
           Your Cloud, Your Way
         </Typography>
-        <Typography variant={"h6"}>
+        <Typography style={{ width: "70%" }} variant={"h6"}>
           All cloud details of your product in one dashboard
         </Typography>
       </Box>
