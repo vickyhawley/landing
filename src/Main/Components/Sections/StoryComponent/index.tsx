@@ -21,9 +21,10 @@ export function StoryComponent({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        padding: 40,
-        paddingLeft: "20%",
-        paddingRight: "20%",
+        paddingLeft: "13%",
+        paddingRight: "13%",
+        paddingTop: 40,
+        paddingBottom: 40,
       }}
     >
       {direction === "left" ? (
@@ -50,7 +51,7 @@ export function StoryComponent({
               justifyContent={"flex-start"}
               color={"#00B6E2"}
               alignItems={"flex-start"}
-              variant="h3"
+              variant="h2"
               fontWeight={"bold"}
               style={{ marginBottom: 10 }}
             >
@@ -92,7 +93,7 @@ export function StoryComponent({
             }}
           >
             <Box>
-              <img src={image} height="300px" alt="story image" />
+              <img src={image} height={400} alt="story image" />
             </Box>
           </Box>
         </Box>
@@ -108,7 +109,7 @@ export function StoryComponent({
         >
           <Box style={{ flex: 1, justifyContent: "center" }}>
             <Box>
-              <img src={image} height="300px" alt="story image" />
+              <img src={image} height={400} alt="story image" />
             </Box>
           </Box>{" "}
           <Box
@@ -125,7 +126,7 @@ export function StoryComponent({
               justifyContent={"flex-start"}
               alignItems={"flex-end"}
               fontWeight={700}
-              variant="h3"
+              variant="h2"
               color={"#00B6E2"}
               style={{ marginBottom: 20 }}
             >

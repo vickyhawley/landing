@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Footer, NavBar } from "./Main";
-import { About, Feature } from "./Main/Components/Sections";
+import { About, Feature, StoryCarousel } from "./Main/Components/Sections";
 import { Intro } from "./Main/Components/Sections/Intro";
-import imageMain from "./Main/Images/carlos-muza-hpjSkU2UYSU-unsplash.jpg";
 import dash from "./Main/Images/dashPink.png";
+import dashboard from "./Main/Images/dash.svg";
+import budget from "./Main/Images/budgeting.png";
 import numbers from "./Main/Images/dashNumbers.png";
 import graphic from "./Main/Images/graphic.png";
 import { StoryComponent } from "./Main/Components/Sections/StoryComponent";
@@ -20,7 +21,7 @@ function App() {
         <StoryComponent
           title={"One Dashboard for all processes"}
           description={"Budgeting, approvals, provisioning and billing"}
-          image={dash}
+          image={dashboard}
         />
         <StoryComponent
           direction="right"
@@ -28,7 +29,7 @@ function App() {
           description={
             "The Cloveda dashboard allows project managers to plan, estimate and budget for projects by giving access to all expenditure day-by-day"
           }
-          image={numbers}
+          image={budget}
         />
         <StoryComponent
           title={"Approvals"}
@@ -50,6 +51,7 @@ function App() {
           }
           image={numbers}
         />
+        <StoryCarousel />
         <Feature />
         <CustomStory />
       </div>
