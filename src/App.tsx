@@ -3,13 +3,15 @@ import "./App.css";
 import { Footer, NavBar } from "./Main";
 import { About, Feature, StoryCarousel } from "./Main/Components/Sections";
 import { Intro } from "./Main/Components/Sections/Intro";
-import dash from "./Main/Images/dashPink.png";
 import dashboard from "./Main/Images/dash.svg";
-import budget from "./Main/Images/budgeting.png";
-import numbers from "./Main/Images/dashNumbers.png";
+import billing from "./Main/Images/budgeting.png";
+import budget from "./Main/Images/budget.png";
+import approval from "./Main/Images/approvals.png";
 import graphic from "./Main/Images/graphic.png";
 import { StoryComponent } from "./Main/Components/Sections/StoryComponent";
 import { CustomStory } from "./Main/Components/Sections/BusinessIntelligence";
+import { SignUp } from "./Main/Components/Sections/SignUp";
+import { FullTransparency } from "./Main/Components/Sections/Transparency";
 
 function App() {
   return (
@@ -36,7 +38,7 @@ function App() {
           description={
             "Cloveda ensures the necessary approvals occur before provisioning, protecting your cloud infrastructure and giving management peace of mind."
           }
-          image={dash}
+          image={approval}
         />
         <StoryComponent
           direction="right"
@@ -49,11 +51,13 @@ function App() {
           description={
             "Cloveda gives you daily, month to date, billing of the infrastructure in your product level. So that you can envision how much cloud infrastructure is costing for your product."
           }
-          image={numbers}
+          image={billing}
         />
         <StoryCarousel />
         <Feature />
         <CustomStory />
+        <FullTransparency />
+        <SignUp />
       </div>
       <Footer />
     </>
