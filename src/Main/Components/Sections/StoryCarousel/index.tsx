@@ -64,7 +64,7 @@ export function StoryCarousel() {
             <Typography style={{ marginBottom: 24 }}>
               {item.description}
             </Typography>
-            <img height={300} src={item.url} alt={item.description} />
+            <img height={450} src={item.url} alt={item.description} />
           </Box>
         ))}
       </Carousel>

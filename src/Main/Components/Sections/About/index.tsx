@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import dashboard from "../../../Images/graphic.png";
+import dashboard from "../../../Images/dashBranded.svg";
 
 export function About() {
   return (
@@ -22,7 +22,11 @@ export function About() {
           flex: 1,
         }}
       >
-        <Typography fontWeight={700} variant={"h3"}>
+        <Typography
+          fontWeight={700}
+          variant={"h3"}
+          style={{ color: "#00B6E2" }}
+        >
           Your Cloud, Your Way
         </Typography>
         <Typography style={{ width: "70%" }} variant={"h6"}>

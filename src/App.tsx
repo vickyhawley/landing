@@ -12,6 +12,7 @@ import { StoryComponent } from "./Main/Components/Sections/StoryComponent";
 import { CustomStory } from "./Main/Components/Sections/BusinessIntelligence";
 import { SignUp } from "./Main/Components/Sections/SignUp";
 import { FullTransparency } from "./Main/Components/Sections/Transparency";
+import { FirstStory } from "./Main/Components/Sections/FirstStory";
 
 function App() {
   return (
@@ -20,11 +21,14 @@ function App() {
         <NavBar />
         <About />
         <Intro />
-        <StoryComponent
+        {/* <StoryComponent
           title={"One Dashboard for all processes"}
-          description={"Budgeting, approvals, provisioning and billing"}
+          description={
+            "Budgeting, approvals, provisioning and billing all under one roof"
+          }
           image={dashboard}
-        />
+        /> */}
+        <FirstStory />
         <StoryComponent
           direction="right"
           title={"Budgeting"}
@@ -36,14 +40,16 @@ function App() {
         <StoryComponent
           title={"Approvals"}
           description={
-            "Cloveda ensures the necessary approvals occur before provisioning, protecting your cloud infrastructure and giving management peace of mind."
+            "Cloveda puts apprpvals at the top, giving visibility of apporvals at every stage of the process, wheter that involves creating, responding to or updating an approval."
           }
           image={approval}
         />
         <StoryComponent
           direction="right"
           title={"Provisioning"}
-          description={""}
+          description={
+            "Infrastructure can be provisioned right after approval. Cloveda ensures the necessary approvals occur before provisioning, protecting your cloud infrastructure and giving management peace of mind."
+          }
           image={graphic}
         />
         <StoryComponent
