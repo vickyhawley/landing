@@ -10,23 +10,55 @@ export function Footer() {
         flex: 1,
         paddingLeft: "20%",
         paddingRight: "20%",
-        paddingTop: "5%",
-        paddingBottom: "5%",
+        paddingTop: "2%",
+        paddingBottom: "2%",
         justifyContent: "space-between",
       }}
     >
-      <Box style={{ display: "flex", flexDirection: "column" }}>
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {" "}
-        <Link>Link one</Link>
-        <Link>Link two</Link>
-        <Link>Link three</Link>
+        <Link
+          onClick={() => {}}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          More information
+        </Link>
+        <Link
+          onClick={() => {}}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          More information
+        </Link>
       </Box>
       <img src={logo} height={80} alt="cloved logo" />
-      <Box style={{ display: "flex", flexDirection: "column" }}>
+      <Box
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {" "}
-        <Link>Link one</Link>
-        <Link>Link two</Link>
-        <Link>Link three</Link>
+        <Link
+          onClick={() => {}}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          More information
+        </Link>
+        <Link
+          onClick={() => {}}
+          style={{ textDecoration: "none", color: "black" }}
+        >
+          More information
+        </Link>
       </Box>
     </Box>
   );

@@ -33,11 +33,11 @@ export function StoryCarousel() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: 40,
-          marginBottom: 16,
+          marginTop: 60,
+          marginBottom: 36,
         }}
       >
-        <Typography style={{ width: "80%" }} variant={"h4"} fontWeight={600}>
+        <Typography style={{ width: "60%" }} variant={"h4"} fontWeight={600}>
           Everything you need to{" "}
           <span style={{ color: "#00B6E2" }}>organise</span> AWS projects
         </Typography>
@@ -57,11 +57,13 @@ export function StoryCarousel() {
             <Typography
               variant="h6"
               fontWeight={600}
-              style={{ color: "#FF8200" }}
+              style={{ color: "#FF8200", marginBottom: 24 }}
             >
               {item.name}
             </Typography>
-            <Typography>{item.description}</Typography>
+            <Typography style={{ marginBottom: 24 }}>
+              {item.description}
+            </Typography>
             <img height={300} src={item.url} alt={item.description} />
           </Box>
         ))}
