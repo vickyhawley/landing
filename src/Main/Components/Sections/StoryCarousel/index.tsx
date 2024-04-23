@@ -26,7 +26,10 @@ export function StoryCarousel() {
   ];
 
   return (
-    <Box style={{ paddingLeft: "15%", paddingRight: "15%", marginBottom: 60 }}>
+    <Box
+      id="dashboard"
+      style={{ paddingLeft: "15%", paddingRight: "15%", marginBottom: 60 }}
+    >
       <Box
         style={{
           display: "flex",

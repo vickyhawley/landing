@@ -1,20 +1,10 @@
 import { Box, Link } from "@mui/material";
 import logo from "../../Images/logo.png";
+import "./style.css";
 
 export function Footer() {
   return (
-    <Box
-      flexDirection={"row"}
-      style={{
-        display: "flex",
-        flex: 1,
-        paddingLeft: "20%",
-        paddingRight: "20%",
-        paddingTop: "2%",
-        paddingBottom: "2%",
-        justifyContent: "space-between",
-      }}
-    >
+    <Box className="container-footer">
       <Box
         style={{
           display: "flex",
@@ -37,7 +27,7 @@ export function Footer() {
           More information
         </Link>
       </Box>
-      <img src={logo} height={80} alt="cloved logo" />
+      <img src={logo} className="logo-footer" alt="cloved logo" />
       <Box
         style={{
           display: "flex",

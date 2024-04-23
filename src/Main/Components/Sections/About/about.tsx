@@ -1,35 +1,24 @@
 import { Box, Typography } from "@mui/material";
-import dashboard from "../../../Images/dashBranded.svg";
+import dashboard from "../../../Images/graphic.png";
+import "./about.css";
 
 export function About() {
   return (
-    <Box
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        flex: 1,
-      }}
-    >
-      <Box
-        style={{
-          paddingTop: 40,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          flex: 1,
-        }}
-      >
+    <Box id="about" className="container-about">
+      <Box className="inner-container-about">
         <Typography
           fontWeight={700}
           variant={"h3"}
+          className={"title-about"}
           style={{ color: "#00B6E2" }}
         >
           Your Cloud, Your Way
         </Typography>
-        <Typography style={{ width: "70%" }} variant={"h6"}>
+        <Typography
+          className="description-about"
+          style={{ width: "70%" }}
+          variant={"h6"}
+        >
           All cloud details of your product in one dashboard
         </Typography>
       </Box>
@@ -38,7 +27,7 @@ export function About() {
         <img
           src={dashboard}
           alt="two people looking at a dashboard"
-          height="400px"
+          className="image-about"
         />
       </Box>
     </Box>

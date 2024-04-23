@@ -1,20 +1,9 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
+import "./style.css";
 
 export function SignUp() {
   return (
-    <Box
-      style={{
-        paddingLeft: "20%",
-        paddingRight: "20%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        backgroundColor: "#00B6E2",
-        paddingTop: 30,
-        paddingBottom: 30,
-      }}
-    >
+    <Box id="signup" className="container-signup">
       <Box>
         <Typography color={"white"} style={{ fontSize: 40 }}>
           Get Early Access.
@@ -23,13 +12,15 @@ export function SignUp() {
           Sign up today.
         </Typography>
       </Box>
-      <Box style={{ display: "flex", flexDirection: "column", width: "50%" }}>
+      <Box className="input-container-signup">
         <TextField
           style={{
             backgroundColor: "white",
             borderRadius: 10,
             marginTop: 10,
           }}
+          type="email"
+          name="email"
         />
         <Button
           style={{
@@ -41,6 +32,7 @@ export function SignUp() {
             marginTop: 10,
             color: "white",
           }}
+          onSubmit={() => "mailto:v.l.hawley@hotmail.com"}
         >
           Sign Up
         </Button>

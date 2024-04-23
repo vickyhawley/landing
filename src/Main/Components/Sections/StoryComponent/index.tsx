@@ -1,4 +1,5 @@
 import { Box, Link, Typography } from "@mui/material";
+import "./style.css";
 
 export interface IStoryComponentProps {
   image: string;
@@ -14,43 +15,13 @@ export function StoryComponent({
   direction = "left",
 }: IStoryComponentProps) {
   return (
-    <Box
-      style={{
-        display: "flex",
-        flex: 1,
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        paddingLeft: "13%",
-        paddingRight: "13%",
-        paddingTop: 40,
-        paddingBottom: 40,
-      }}
-    >
+    <Box id="budgeting" className={"container-story"}>
       {direction === "left" ? (
-        <Box
-          style={{
-            display: "flex",
-            flex: 1,
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            style={{
-              display: "flex",
-              flex: 1,
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-            }}
-          >
+        <Box className={"inner-container-layout-left"}>
+          <Box className={"text-container-story-left"}>
             <Typography
-              textAlign={"start"}
-              justifyContent={"flex-start"}
+              className="title-right"
               color={"#00B6E2"}
-              alignItems={"flex-start"}
               variant="h2"
               fontWeight={"bold"}
               style={{ marginBottom: 10 }}
@@ -58,31 +29,14 @@ export function StoryComponent({
               {title}
             </Typography>
             <Typography
+              className="body-right"
               display={"flex"}
-              textAlign={"start"}
-              justifyContent={"flex-start"}
-              alignItems={"flex-start"}
               variant="body2"
               style={{ marginBottom: 24, width: "60%" }}
             >
               {description}
             </Typography>
-            <Link
-              style={{
-                fontWeight: "bold",
-                paddingLeft: 18,
-                paddingRight: 18,
-                paddingTop: 16,
-                paddingBottom: 16,
-                textDecoration: "none",
-                backgroundColor: "#FF8200",
-                color: "#000",
-                fontSize: 20,
-                borderRadius: 15,
-              }}
-            >
-              Sign up
-            </Link>
+            <Link className={"link-story"}>Sign up</Link>
           </Box>
           <Box
             style={{
@@ -93,38 +47,28 @@ export function StoryComponent({
             }}
           >
             <Box>
-              <img src={image} height={400} alt="story image" />
+              <img
+                src={image}
+                className="image-story-left"
+                alt="colourful vector explaining the title of the component"
+              />
             </Box>
           </Box>
         </Box>
       ) : (
-        <Box
-          style={{
-            display: "flex",
-            flex: 1,
-            flexDirection: "row",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-          }}
-        >
+        <Box className={"inner-container-layout-right"}>
           <Box style={{ flex: 1, justifyContent: "center" }}>
             <Box>
-              <img src={image} height={400} alt="story image" />
+              <img
+                src={image}
+                className="image-story-right"
+                alt="colourful vector explaining the title of the component"
+              />
             </Box>
           </Box>{" "}
-          <Box
-            style={{
-              display: "flex",
-              flex: 1,
-              flexDirection: "column",
-              justifyContent: "flex-end",
-              alignItems: "flex-end",
-            }}
-          >
+          <Box className={"text-container-story-right "}>
             <Typography
-              textAlign={"end"}
-              justifyContent={"flex-start"}
-              alignItems={"flex-end"}
+              className="title-left"
               fontWeight={700}
               variant="h2"
               color={"#00B6E2"}
@@ -133,30 +77,13 @@ export function StoryComponent({
               {title}
             </Typography>
             <Typography
-              textAlign={"end"}
-              justifyContent={"flex-start"}
-              alignItems={"flex-end"}
+              className="body-right"
               variant="body2"
               style={{ marginBottom: 20, width: "60%" }}
             >
               {description}
             </Typography>
-            <Link
-              style={{
-                fontWeight: "bold",
-                paddingLeft: 18,
-                paddingRight: 18,
-                paddingTop: 16,
-                paddingBottom: 16,
-                textDecoration: "none",
-                backgroundColor: "#FF8200",
-                color: "#000",
-                fontSize: 20,
-                borderRadius: 15,
-              }}
-            >
-              Sign up
-            </Link>
+            <Link className={"link-story"}>Sign up</Link>
           </Box>
         </Box>
       )}

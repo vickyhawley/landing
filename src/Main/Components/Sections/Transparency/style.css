@@ -1,0 +1,30 @@
+
+.container-transparency {
+    display: flex;
+        flex: 1;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-size: cover;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        align-items: center;
+        justify-content: center;
+}
+
+.title-transparency {
+    width: 50%;
+}
+
+@media only screen and (max-width: 800px) {}
+
+@media only screen and (max-width: 1000px) {
+
+    .container-transparency {
+       padding-left: 2%;
+       padding-right: 2%;
+    }
+
+    .title-transparency {
+        width: 90%;
+    }
+}

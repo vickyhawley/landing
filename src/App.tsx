@@ -3,11 +3,11 @@ import "./App.css";
 import { Footer, NavBar } from "./Main";
 import { About, Feature, StoryCarousel } from "./Main/Components/Sections";
 import { Intro } from "./Main/Components/Sections/Intro";
-import dashboard from "./Main/Images/dash.svg";
 import billing from "./Main/Images/budgeting.png";
 import budget from "./Main/Images/budget.png";
 import approval from "./Main/Images/approvals.png";
-import graphic from "./Main/Images/graphic.png";
+import graphic from "./Main/Images/govern2.svg";
+import provisioning from "./Main/Images/provisioning.png";
 import { StoryComponent } from "./Main/Components/Sections/StoryComponent";
 import { CustomStory } from "./Main/Components/Sections/BusinessIntelligence";
 import { SignUp } from "./Main/Components/Sections/SignUp";
@@ -21,13 +21,6 @@ function App() {
         <NavBar />
         <About />
         <Intro />
-        {/* <StoryComponent
-          title={"One Dashboard for all processes"}
-          description={
-            "Budgeting, approvals, provisioning and billing all under one roof"
-          }
-          image={dashboard}
-        /> */}
         <FirstStory />
         <StoryComponent
           direction="right"
@@ -46,13 +39,21 @@ function App() {
         />
         <StoryComponent
           direction="right"
-          title={"Provisioning"}
+          title={"Governance"}
           description={
-            "Infrastructure can be provisioned right after approval. Cloveda ensures the necessary approvals occur before provisioning, protecting your cloud infrastructure and giving management peace of mind."
+            "Governance of your AWS Cloud environment, such as rules for your environment, risks, and the alignment of internal policies can be implemented at every level."
           }
           image={graphic}
         />
         <StoryComponent
+          title={"Provisioning"}
+          description={
+            "Infrastructure can be provisioned right after approval. Cloveda ensures the necessary approvals occur before provisioning, protecting your cloud infrastructure and giving management peace of mind."
+          }
+          image={provisioning}
+        />
+        <StoryComponent
+          direction="right"
           title={"Billing"}
           description={
             "Cloveda gives you daily, month to date, billing of the infrastructure in your product level. So that you can envision how much cloud infrastructure is costing for your product."
